@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth, User } from "@/context/AuthContext";
 import API from "@/api/api";
-import { genders } from "../register/step2/page";
 import { getAuthHeader } from "@/utils/auth";
 import { formatDate } from "@/utils/date";
 import { toast } from "react-toastify";
@@ -18,6 +17,8 @@ const initialFormValues = {
   favorites: [] as string[],
   createdAt: "",
 };
+
+const genders = ["Male", "Female", "Other"];
 
 export default function ProfilePage() {
   const { user, logout } = useAuth();
