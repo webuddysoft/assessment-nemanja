@@ -8,11 +8,11 @@ import "react-toastify/dist/ReactToastify.css";
 import { useRegister } from "@/context/RegisterContext";
 
 
-type Step1Data = {
-  username: string;
-  email: string;
-  password: string;
-};
+// type Step1Data = {
+//   username: string;
+//   email: string;
+//   password: string;
+// };
 
 export const genders = ["Male", "Female", "Other"];
 
