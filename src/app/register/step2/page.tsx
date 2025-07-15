@@ -65,8 +65,7 @@ export default function RegisterStep2() {
       toast.success("Registration successful!");
       sessionStorage.removeItem("registerStep1");
       setTimeout(() => router.push("/login"), 1500);
-    } catch (e: any) {
-      console.error(e);
+    } catch (e) {
       toast.error(`Registration failed. ${e?.response?.data?.detail || ''}`);
     }
   };
