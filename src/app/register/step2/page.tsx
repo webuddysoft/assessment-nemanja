@@ -7,14 +7,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useRegister } from "@/context/RegisterContext";
 
-
-// type Step1Data = {
-//   username: string;
-//   email: string;
-//   password: string;
-// };
-
-export const genders = ["Male", "Female", "Other"];
+const genders = ["Male", "Female", "Other"];
 
 export default function RegisterStep2() {
   const router = useRouter();
@@ -72,9 +65,9 @@ export default function RegisterStep2() {
       toast.success("Registration successful!");
       sessionStorage.removeItem("registerStep1");
       setTimeout(() => router.push("/login"), 1500);
-    } catch (e) {
+    } catch (e: any) {
       console.error(e);
-      toast.error(`Registration failed. ${e?.response.data.detail || ''}`);
+      toast.error(`Registration failed. ${e?.response?.data?.detail || ''}`);
     }
   };
 
